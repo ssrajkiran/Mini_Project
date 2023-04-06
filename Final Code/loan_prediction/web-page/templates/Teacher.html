@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        alert("Welcome to my Login page");
+function myfun(){
+    var a = document.getElementById("User_Name").value;
+    var b = document.getElementById("Password").value;
+    if(a ==""){
+
+         document.getElementById("Message").innerHTML ="</br> <span style='font-size: 20px; font-family: sans-serif;'> **(Enter Name in textfield) </span>";
+
+        return false;
+    }
+    if(b ==""){
+        document.getElementById("Meg").innerHTML ="</br> <span style='font-size: 20px; font-family: sans-serif;'> **(Enter Password in textfield) </span>";
+        return false;
+    }
+
+    if(User_Name.value =="admin" && Password.value =="1234"){
+
+        alert("Login successfully");
+        return true;
+    }
+
+    else{
+        alert("Login Failed");
+        return false;
+    }
+}
+    </script>
+   <link rel="stylesheet" href="{{ url_for('static', filename='/styles/sample_index.css')}}">
+    <title>Document</title>
+    
+</head>
+<body>
+    <center>
+        <h1>XXX Bank </h1>
+    <h1> Welcome to Login page!</h1></center>
+    <form onsubmit="return myfun()" action = "./index" class="box">
+        <h1> 
+        USERNAME <input type="text" id="User_Name" value="">
+        
+        <span id="Message"></span> </br></br> 
+    
+
+    PASSWORD <input type="password" id="Password" value="">
+   
+    <span id="Meg"></span> </br></br>
+</h1>
+    <input type="submit" value="submit"></input>
+    
+        </form>
+
+</body>
+</html>
